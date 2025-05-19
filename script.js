@@ -1,5 +1,18 @@
 function stringChop(str, size) {
-  // your code here
+  // Handle null or empty string
+  if (str === null || str === "") {
+    return [];
+  }
+
+  size = Number(size); // Convert size to a number
+
+  const result = [];
+
+  for (let i = 0; i < str.length; i += size) {
+    result.push(str.slice(i, i + size));
+  }
+
+  return result;
 }
 
 // Do not change the code below
